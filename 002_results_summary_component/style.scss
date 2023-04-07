@@ -135,6 +135,10 @@ html, body {
                     display: flex;
                     align-items: center;
                 }
+                
+                .table-score-score {
+                    color: black;
+                }
 
                 &.reaction {
                     color: hsl(0, 100%, 67%);

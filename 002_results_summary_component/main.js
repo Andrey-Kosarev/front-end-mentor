@@ -43,7 +43,7 @@ for (let d of data) {
     catEl.appendChild(imgEl)
     catEl.append(d.category)
 
-
+    scoreEl.classList.add('table-score-score')
     scoreEl.appendChild(strongEl)
     scoreEl.append('/100')
 
