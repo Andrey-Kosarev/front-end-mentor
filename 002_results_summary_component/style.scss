@@ -19,11 +19,10 @@ html, body {
 
 #score-component-wrapper {
     overflow: hidden;
-    width: 50%;
+    width: 95%;
     max-width: 550px;
     height: 40%;
-    border-radius: 5%;
-    
+    border-radius: 5%; 
     display: grid;
     grid-template-columns: 1fr 1fr;
     box-shadow: 5px 25px 30px -25px hsl(224, 30%, 27%);
@@ -164,5 +163,12 @@ html, body {
     
 }
 
-
+@media (max-width: 375px) {
+    #score-component-wrapper {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        width: 75%;
+    }
+}
 

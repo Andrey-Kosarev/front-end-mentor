@@ -15,7 +15,7 @@ html, body {
 
 #score-component-wrapper {
   overflow: hidden;
-  width: 50%;
+  width: 95%;
   max-width: 550px;
   height: 40%;
   border-radius: 5%;
@@ -135,4 +135,13 @@ html, body {
 #summary #summary-inner #summary-inner-table .summary-table-score.visual {
   color: hsl(234, 85%, 45%);
   background-color: hsl(234, 85%, 97%);
+}
+
+@media (max-width: 375px) {
+  #score-component-wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 75%;
+  }
 }/*# sourceMappingURL=style.css.map */
