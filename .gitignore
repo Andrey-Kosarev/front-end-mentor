@@ -1,8 +1,12 @@
 
 */design
 */design/*
-
+*/style-guide.md
+*/README.md
+*/README-template.md
 
 */*.map
 002_results_summary_component/style.scss
 002_results_summary_component/style.css.map
+
+

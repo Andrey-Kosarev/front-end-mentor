@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Success!</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style-desktop.css">
+    <link rel="stylesheet" href="style-mobile.css">
+</head>
+<body>
+    <main>
+        <div class="success-msg-wrapper">
+            <span class="success-msg-icon"></span>
+            <h1 class="success-msg-thanks">Thanks for subscribing!</h1>
+            <p class="success-msg-msg">A confirmation email has been sent to <strong id="email-address"></strong>
+                Please open it and click the button inside to confirm your subscription.</p>
+            <button class="success-msg-dismiss-btn"> Dismiss message</button>
+        </div>
+    </main>
+</body>
+<script>
+    document.getElementById('email-address').innerHTML = new URLSearchParams( window.location.search).get('email')
+</script>
+
+</html>
