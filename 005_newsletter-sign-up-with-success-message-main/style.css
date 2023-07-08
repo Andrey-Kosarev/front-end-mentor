@@ -85,7 +85,7 @@ ul.newsletter-description > li::before {
 }
 
 .newsletter-page-image{
-    background: url(/assets/images/illustration-sign-up-desktop.svg) no-repeat;
+    background: url(./assets/images/illustration-sign-up-desktop.svg) no-repeat;
     background-size: cover;
     background-position: center;
     border-radius: 15px;
