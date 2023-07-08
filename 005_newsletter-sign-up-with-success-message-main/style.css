@@ -148,6 +148,7 @@ ul.newsletter-description > li::before {
     background-color: hsl(0, 0%, 100%);
     height: 50%;
     width: 50%;
+    max-width: 30rem;
     border-radius:  var(--border-radius);
     padding: 3rem 4rem;
     display: flex;
