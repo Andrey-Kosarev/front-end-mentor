@@ -1,0 +1,147 @@
+:root {
+    --light-grey: #f0f0f0;
+    --purple: hsl(259, 100%, 65%);
+    --error-red: #FF5959;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url(./assets/fonts/Poppins-Regular.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html, body, main {
+    width: 100%;
+    height: 100%;
+    font-size: 1em;
+    font-family: 'Poppins';
+}
+
+main {
+    background-color: var(--light-grey);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.age-calculator-wrapper {
+    max-width: 840px;
+    width: 66%;
+    background-color: white;
+    border-radius: 1.5rem 1.5rem 200px 1.5rem;
+    padding: 3.5rem;
+}
+
+.age-calculator {
+    height: 100%;
+}
+
+.date-input-form{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+
+
+.age-inputs {
+    width: 100%;
+    display: flex;
+    gap: 2rem;
+}
+
+.age-inputs .input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    flex-basis: 25%;
+}
+
+.age-inputs .input-group input {
+    width: 10rem;
+    padding: 0.75rem 1.5rem;
+    height: 4rem;
+    box-sizing: border-box;
+    border: 1px solid var(--light-grey);
+    border-radius: 0.5rem;
+    font-weight: bolder;
+    font-size: 1.5rem;
+}
+
+.age-inputs .input-group input+p.input-error-msg {
+    color: var(--error-red);
+    visibility: hidden;
+    font-size: 0.75rem;
+} 
+
+.age-inputs .input-group input::-webkit-outer-spin-button,
+.age-inputs .input-group input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.age-inputs .input-group label {
+    text-transform: uppercase;
+}
+
+
+
+
+.delimiter {
+    --delimiter-height: 6rem;
+    height: var(--delimiter-height);
+    width: 100%;
+    position: relative;
+}
+
+.delimiter>.horizontal-line {
+    background-color: var(--light-grey);
+    height: 1px;
+    position: absolute;
+    top: 50%;
+    width: 100%;
+}
+
+.delimiter>#btn-calculate-age {
+    background: url(./assets/images/icon-arrow.svg) no-repeat center;
+    height: var(--delimiter-height);
+    background-color:  var(--purple);
+    border-radius: 50%;
+    width: var(--delimiter-height);
+    position: absolute;
+    right: 0;
+    cursor: pointer;
+    border: none;
+}
+
+.age-result-line {
+    font-size: 6.5rem;
+}
+
+.age-result-value {
+    color: var(--purple);
+    line-height: 110%;
+    letter-spacing: -2%;
+}
+
+
+/*INVALID FORM*/
+
+.date-input-form.invalid .age-inputs .input-group input {
+    border: 1px solid var(--error-red);
+}
+
+.date-input-form.invalid .age-inputs .input-group label {
+    color: var(--error-red);
+}
+
+.date-input-form.invalid .age-inputs .input-group .input-holder::after {
+    content: attr(data-error);
+    font-size: .7rem;
+    display: block;
+    color: var(--error-red);
+}
